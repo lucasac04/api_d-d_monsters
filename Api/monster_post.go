@@ -7,7 +7,7 @@ import (
 )
 
 func addMonster(context *gin.Context) {
-	var newMonster Monster //criadno uma variável do tipo Monster
+	var newMonster Monster //criando uma variável do tipo Monster
 
 	if err := context.BindJSON(&newMonster); err != nil {
 		return // como se desse um break caso a estrutura não bata com a do formato json de monster
