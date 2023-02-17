@@ -28,6 +28,7 @@ func getMonster(context *gin.Context) {
 	monster, error := getMonsterById(id)
 	if error != nil {
 		context.IndentedJSON(http.StatusNoContent, gin.H{"message": "Monster Not Found"})
+		return
 	}
 	context.IndentedJSON(http.StatusOK, monster)
 
